@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: 47.113.216.179 # 主机名
+    port: 5672 # 端口
+    virtual-host: / # 虚拟主机
+    username: admin # 用户名
+    password: admin123 # 密码
