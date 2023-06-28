@@ -17,19 +17,19 @@ public class TopicConsumer {
 
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(name = "topic.queue1"),
-            exchange = @Exchange(name = "itcast.topic",type = ExchangeTypes.TOPIC),
+            exchange = @Exchange(name = "itcast.topic", type = ExchangeTypes.TOPIC),
             key = "china.#"
     ))
-    public void listenTopicQueue1(String msg){
+    public void listenTopicQueue1(String msg) {
         System.out.println("消费者接收到topic.queue1的消息：【" + msg + "】");
     }
 
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(name = "topic.queue2"),
-            exchange = @Exchange(name = "itcast.topic",type = ExchangeTypes.TOPIC),
+            exchange = @Exchange(name = "itcast.topic", type = ExchangeTypes.TOPIC),
             key = "#.news"
     ))
-    public void listenTopicQueue2(String msg){
+    public void listenTopicQueue2(String msg) {
         System.out.println("消费者接收到topic.queue2的消息：【" + msg + "】");
 
     }

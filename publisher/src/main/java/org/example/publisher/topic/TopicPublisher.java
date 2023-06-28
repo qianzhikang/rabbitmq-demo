@@ -15,7 +15,7 @@ public class TopicPublisher {
     @Resource
     private RabbitTemplate rabbitTemplate;
 
-    public void doPub(){
+    public void doPub() {
         // 交换机名称
         String exchangeName = "itcast.topic";
         // 消息
@@ -23,5 +23,4 @@ public class TopicPublisher {
         // 发送消息
         rabbitTemplate.convertAndSend(exchangeName, "china.news", message);
     }
-
 }
